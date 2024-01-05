@@ -1,0 +1,4 @@
+S
+a&b&c&d
+S
+S->a S b S|c S|c

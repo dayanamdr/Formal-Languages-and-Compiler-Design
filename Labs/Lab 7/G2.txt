@@ -1,0 +1,17 @@
+program&statement&statement_list&statement&var_stmt&if_stmt&assign_stmt&while_stmt&returns_stmt&condition&expression&var_type&relation&term&factor
+IDENTIFIER&;if&(&)&{&}&==&!=&<&<=&>&>=&int&string&char&+&-&*&/&=&while&returns&,&print&read
+program
+program->statement_list
+statement->var_stmt|if_stmt|assign_stmt|while_stmt|returns_stmt
+statement_list->statement
+var_type->int|string|char
+var_stmt->var_type IDENTIFIER
+if_stmt->if ( condition ) { statement }
+condition->expression ( relation ) expression
+relation-><|<=|==|!=|>=|>
+expression->expression + term|expression - term|term
+term->term * factor|term / factor|factor
+factor->( expression )|IDENTIFIER|CONST
+assign_stmt->IDENTIFIER = expression
+while_stmt->while ( condition ) { statement }
+returns_stmt->returns IDENTIFIER ;
